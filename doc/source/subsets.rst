@@ -125,7 +125,7 @@ Selecting a subset of rows by index and an (ordered) subset of columns by name::
 
 Selecting a subset of rows by using a condition::
 
-  julia> df[df[:A] % 2 .== 0, :]
+  julia> df[df[:A] % 2 .== 0, 1:length(df)]
   5x2 DataFrame
   | Row | A  | B  |
   |-----|----|----|
@@ -135,7 +135,7 @@ Selecting a subset of rows by using a condition::
   | 4   | 8  | 16 |
   | 5   | 10 | 20 |
 
-  julia> df[df[:B] % 2 .== 0, :]
+  julia> df[df[:B] % 2 .== 0, 1:length(df)]
   10x2 DataFrame
   | Row | A  | B  |
   |-----|----|----|
